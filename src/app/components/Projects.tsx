@@ -1,7 +1,15 @@
-import { ExternalLink, Github, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  website?: string;
+};
+
+const projects: Project[] = [
   {
     title: 'HodlBase',
     description: 'Institutional data platform for tracking Bitcoin treasury companies and their digital credit instruments. Built with a reliable REST & Websocket API serving multiple companies in the Bitcoin space.',
@@ -17,12 +25,11 @@ const projects = [
     website: 'https://levelhub.app'
   },
   {
-    title: 'Decentralized Authorization Protocol',
-    description: 'Master\'s thesis project: Designed an efficient decentralized authorization protocol leveraging Macaroons for secure, scalable authentication in distributed systems.',
-    tags: ['Distributed Systems', 'Security', 'Macaroons', 'Authorization'],
-    image: '🔐',
-    github: '#',
-    demo: '#'
+    title: 'TradingView Indicator Suite',
+    description: 'Actively maintained suite of TradingView indicators for in-depth analysis of Bitcoin treasury companies and digital credit instruments.',
+    tags: ['Pine Script', 'TradingView', 'Bitcoin', 'Digital Credit', 'Quant'],
+    image: '₿',
+    website: 'https://www.tradingview.com/u/HodlBase/#published-scripts'
   },
 ];
 
@@ -47,6 +54,12 @@ export function Projects() {
                     alt="HodlBase"
                     className="w-full h-full object-cover object-left"
                   />
+                ) : project.title === 'TradingView Indicator Suite' ? (
+                  <img
+                    src={theme === 'dark' ? '/tradingview-white.png' : '/tradingview-black.png'}
+                    alt="TradingView Indicator Suite"
+                    className="w-full h-full object-cover object-top"
+                  />
                 ) : project.image.startsWith('/') ? (
                   <img
                     src={project.image}
@@ -67,8 +80,8 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3 mt-auto pt-2">
-                  {'website' in project ? (
+                {project.website && (
+                  <div className="flex gap-3 mt-auto pt-2">
                     <a
                       href={project.website}
                       target="_blank"
@@ -78,29 +91,8 @@ export function Projects() {
                       <Globe className="w-4 h-4" />
                       Visit Website
                     </a>
-                  ) : (
-                    <>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Demo
-                      </a>
-                    </>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

@@ -29,8 +29,10 @@ export function Hero() {
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
             Software engineer with a strong foundation in computer science and mathematics,
             specializing in backend systems, AI pipelines, and financial technology.
-            Passionate about the convergence of Bitcoin and traditional finance, and how
-            technology can reshape our understanding of money and value.
+            Passionate about the convergence of Bitcoin and traditional finance, with a
+            particular interest in Bitcoin as a store-of-value reserve asset and the growing
+            adoption of digital assets within corporate and institutional finance. Driven by
+            how technology is reshaping our understanding of money, value, and financial systems.
           </p>
 
           <div className="flex items-center justify-center md:justify-start gap-4 pt-2">

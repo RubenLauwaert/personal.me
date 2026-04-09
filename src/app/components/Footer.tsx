@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
@@ -15,15 +16,15 @@ export function Footer() {
           <div>
             <h4 className="mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <a href="#skills" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/#skills" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Skills
-              </a>
-              <a href="#projects" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/#projects" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Projects
-              </a>
-              <a href="#contact" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/#contact" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
