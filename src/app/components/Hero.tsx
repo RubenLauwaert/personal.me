@@ -2,8 +2,8 @@ import { Linkedin, Mail, ArrowDown, MapPin } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section id="about" className="min-h-screen flex flex-col items-center justify-center px-4 relative">
-      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center gap-12 md:gap-16">
+    <section id="about" className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 md:pt-0 relative">
+      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="text-center md:text-left space-y-5">
           <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground">
             <MapPin className="w-4 h-4" />
@@ -18,7 +18,7 @@ export function Hero() {
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-6xl">
+            <h1 className="text-4xl md:text-6xl">
               <span className="text-primary">Ruben Lauwaert</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground">
@@ -28,7 +28,7 @@ export function Hero() {
 
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
             Software engineer with a strong foundation in computer science and mathematics,
-            specializing in backend systems, AI pipelines, and financial technology.
+            specializing in backend/big-data systems, AI pipelines, and financial technology.
             Passionate about the convergence of Bitcoin and traditional finance, with a
             particular interest in Bitcoin as a store-of-value reserve asset and the growing
             adoption of digital assets within corporate and institutional finance. Driven by
@@ -64,7 +64,7 @@ export function Hero() {
         </div>
 
         <div className="shrink-0 order-first md:order-last">
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20">
+          <div className="w-36 h-36 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20">
             <img
               src="/profile-pic-slack.jpg"
               alt="Ruben Lauwaert"
@@ -74,7 +74,7 @@ export function Hero() {
         </div>
       </div>
 
-      <a href="#education" className="absolute bottom-8 animate-bounce text-muted-foreground">
+      <a href="#experience" className="hidden md:block absolute bottom-8 animate-bounce text-muted-foreground">
         <ArrowDown className="w-6 h-6" />
       </a>
     </section>
